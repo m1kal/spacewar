@@ -41,10 +41,9 @@
                                 ::game-over]))
 
 (defn make-initial-world []
-  (let [ship (ship/initialize)]
     {:stars (stars/initialize)
      :klingons (klingons/initialize)
-     :ship ship
+     :ship (ship/initialize)
      :bases []
      :transports []
      :clouds []
@@ -57,7 +56,7 @@
                  :duration 5000}
                 {:text "Save the Federation!"
                  :duration 10000}]
-     :game-over false}))
+     :game-over false})
 
 (defn setup []
   (let [vmargin 30 hmargin 5]
